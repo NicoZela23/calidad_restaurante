@@ -3,9 +3,9 @@
     "description": "Proyecto refactorizado y mejorado para asegurar la calidad del software",
     "autoload": {
         "psr-4": {
-            "Core\\": "src/Core/",
+            "Controllers\\": "src/Controllers/",
             "Models\\": "src/Models/",
-            "Controllers\\": "src/Controllers/"
+            "Core\\": "src/Core/"
         }
     },
     "authors": [
