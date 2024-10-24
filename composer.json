@@ -3,7 +3,9 @@
     "description": "Proyecto refactorizado y mejorado para asegurar la calidad del software",
     "autoload": {
         "psr-4": {
-            "Victus\\CalidadRestaurante\\": "src/"
+            "Core\\": "src/Core/",
+            "Models\\": "src/Models/",
+            "Controllers\\": "src/Controllers/"
         }
     },
     "authors": [
