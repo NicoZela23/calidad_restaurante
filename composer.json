@@ -1,0 +1,18 @@
+{
+    "name": "victus/calidad_restaurante",
+    "description": "Proyecto refactorizado y mejorado para asegurar la calidad del software",
+    "autoload": {
+        "psr-4": {
+            "Victus\\CalidadRestaurante\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NicoZela",
+            "email": "fezelayani@gmail.com"
+        }
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "10.0"
+    }
+}
