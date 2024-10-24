@@ -4,13 +4,15 @@ namespace Controllers;
 
 use Core\Database;
 use Models\UserModel;
+use Controllers\DashboardController;
 
 class AuthController {
     public function login() {
         session_start();
 
         if (!empty($_SESSION['active'])) {
-            header('Location: /src/Views/dashboard.php');
+            $dashboardController = new DashboardController();
+            $dashboardController->index();
             exit();
         }
 
@@ -31,7 +33,8 @@ class AuthController {
                     $_SESSION['idUser'] = $user['id'];
                     $_SESSION['nombre'] = $user['nombre'];
                     $_SESSION['rol'] = $user['rol'];
-                    header('Location: /src/Views/dashboard.php');
+                    $dashboardController = new DashboardController();
+                    $dashboardController->index();
                     exit();
                 } else {
                     $alert = $this->createAlert('danger', 'Contraseña incorrecta');
