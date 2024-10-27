@@ -58,11 +58,6 @@
             <!-- /.login-card-body -->
         </div>
     </div>
-    <?php
-        echo '<pre>';
-        print_r(glob('../assets/*'));
-        echo '</pre>';
-    ?>
     <!-- jQuery -->
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
