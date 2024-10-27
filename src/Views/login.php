@@ -18,6 +18,9 @@
 </head>
 
 <body class="hold-transition login-page">
+    
+
+
     <div class="login-box">
         <div class="login-logo">
             <a href="#"><b>Sistemas</b></a>
@@ -55,7 +58,11 @@
             <!-- /.login-card-body -->
         </div>
     </div>
-
+    <?php
+        echo '<pre>';
+        print_r(glob('../assets/*'));
+        echo '</pre>';
+    ?>
     <!-- jQuery -->
     <script src="../assets/plugins/jquery/jquery.min.js"></script>
     <!-- Bootstrap 4 -->
