@@ -14,5 +14,16 @@ class DashboardController {
         $totalVentas = $dashboardModel->getTotalVentas();
 
         require_once '../src/Views/dashboard.php';
+        exit();
+    }
+}
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    $controller = $_GET['controller'] ?? '';
+    $action = $_GET['action'] ?? '';
+
+    if ($controller === 'AnalisisVentaController' && $action === 'index') {
+        $analisisVentaController = new AnalisisVentaController();
+        $analisisVentaController->index();
+        exit();
     }
 }
