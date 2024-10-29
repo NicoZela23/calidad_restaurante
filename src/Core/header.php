@@ -71,7 +71,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
                         <a href="#" class="d-block"><?php echo $_SESSION['nombre']; ?></a>
                     </div>
                 </div>
-
+                <form action="" method="GET">
                 <!-- Sidebar Menu -->
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -152,7 +152,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="analisis_venta.php" class="nav-link">
+                                <a href="index.php?controller=AnalisisVentaController&action=index" class="nav-link">
                                     <i class="nav-icon fas fa-chart-line"></i>
                                     <p>
                                         Análisis de venta
@@ -198,6 +198,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
+                </form>
             </div>
             <!-- /.sidebar -->
         </aside>
