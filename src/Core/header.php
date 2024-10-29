@@ -2,6 +2,10 @@
 if (empty($_SESSION['active'])) {
     header('Location: ../');
 }
+
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,12 +18,15 @@ if (empty($_SESSION['active'])) {
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css">
+    <!-- <link rel="stylesheet" href="../assets/plugins/fontawesome-free/css/all.min.css"> -->
+    <link rel="stylesheet" href="http://localhost/calidad_restaurante/assets/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../assets/dist/css/adminlte.min.css">
-    <link rel="stylesheet" href="../assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+    <!-- <link rel="stylesheet" href="../assets/dist/css/adminlte.min.css"> -->
+    <link rel="stylesheet" href="http://localhost/calidad_restaurante/assets/dist/css/adminlte.min.css">
+    <!-- <link rel="stylesheet" href="../assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css"> -->
+    <link rel="stylesheet" href="http://localhost/calidad_restaurante/assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -49,7 +56,7 @@ if (empty($_SESSION['active'])) {
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
             <a href="dashboard.php" class="brand-link">
-                <img src="../assets/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+                <img src="http://localhost/calidad_restaurante/assets/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">RestBAR</span>
             </a>
 

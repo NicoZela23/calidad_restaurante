@@ -17,20 +17,20 @@
 <!-- REQUIRED SCRIPTS -->
 
 <!-- jQuery -->
-<script src="../assets/plugins/jquery/jquery.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap -->
-<script src="../assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE -->
-<script src="../assets/dist/js/adminlte.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/dist/js/adminlte.min.js"></script>
 
-<script src="../assets/plugins/chart.js/Chart.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/plugins/chart.js/Chart.min.js"></script>
 
 <!-- OPTIONAL SCRIPTS -->
-<script src="../assets/plugins/datatables/jquery.dataTables.min.js"></script>
-<script src="../assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 
-<script src="../assets/js/sweetalert2.all.min.js"></script>
-<script src="../assets/js/funciones.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/js/sweetalert2.all.min.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/js/funciones.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qr-code-styling/lib/qr-code-styling.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 

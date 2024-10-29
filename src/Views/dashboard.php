@@ -86,4 +86,4 @@ include_once "../src/Core/header.php";
     </div>
 </div>
 <?php include_once "../src/Core/footer.php"; ?>
-<script src="../assets/js/dashboard.js"></script>
+<script src="http://localhost/calidad_restaurante/assets/js/dashboard.js"></script>
