@@ -56,7 +56,19 @@ class PlatoController {
                 }
             }
         }
-
-        $this->index();
+        // $_SESSION['alert'] = $alert;
+        header('Location: index.php?controller=PlatoController&action=index');
+        exit;
+    }
+    public function deletePlato()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_POST['id'];
+            $this->platoModel->deletePlato($id);
+            $alert = 'Plato eliminado';
+            $_SESSION['alert'] = $alert;
+            header('Location: index.php?controller=PlatoController&action=index');
+            exit;
+        }
     }
 }

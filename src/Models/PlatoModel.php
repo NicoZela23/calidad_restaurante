@@ -35,4 +35,12 @@ class PlatoModel {
         $query = mysqli_query($this->db, "UPDATE platos SET nombre = '$plato', precio = $precio, imagen = '$imagen', descripcion = '$descripcion' WHERE id = $id");
         return $query;
     }
+    public function deletePlato($id) {
+        $query = "
+            DELETE 
+            FROM platos 
+            WHERE id = $id
+        ";
+        return mysqli_query($this->db, $query);
+    }
 }
