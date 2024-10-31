@@ -78,7 +78,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
                         <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
                         <li class="nav-item">
-                            <a href="dashboard.php" class="nav-link">
+                            <a href="index.php?controller=DashboardController&action=index" class="nav-link">
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Dashboard
@@ -135,7 +135,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
                         <?php if ($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2) {
                             echo '<li class="nav-item">
-                                <a href="platos.php" class="nav-link">
+                                <a href="index.php?controller=PlatoController&action=index" class="nav-link">
                                     <i class="nav-icon fas fa-coffee"></i>
                                     <p>
                                         Platos
@@ -144,7 +144,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
                             </li>';
                         } if ($_SESSION['rol'] == 1) {
                             echo '<li class="nav-item">
-                                <a href="salas.php" class="nav-link">
+                                <a href="index.php?controller=SalaController&action=index" class="nav-link">
                                     <i class="nav-icon fas fa-door-open"></i>
                                     <p>
                                         Salas

@@ -6,19 +6,20 @@ use Models\PlatoModel;
 class PlatoController {
     private $platoModel;
 
-    public function __construct($dbConnection) {
-        $this->platoModel = new PlatoModel($dbConnection);
+    public function __construct() {
+        $this->platoModel = new PlatoModel();
     }
 
     public function index() {
-        session_start();
         if ($_SESSION['rol'] == 1 || $_SESSION['rol'] == 2) {
             $data['platos'] = $this->platoModel->getAllPlatos();
-            require_once '../src/Views/platos.php';
+            $platos = $data['platos'];
+            require_once '../src/Views/plato.php';
         } else {
             header('Location: permisos.php');
         }
     }
+    
 
     public function savePlato() {
         if (!empty($_POST)) {
@@ -47,7 +48,6 @@ class PlatoController {
                         $alert = 'Plato registrado';
                     }
                 } else {
-                    // Update existing plato
                     $this->platoModel->updatePlato($id, $plato, $precio, $nombre, $descripcion);
                     if (!empty($foto['name'])) {
                         move_uploaded_file($foto['tmp_name'], $nombre);

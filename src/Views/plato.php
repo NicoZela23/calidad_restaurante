@@ -1,5 +1,7 @@
 <!-- platos.php -->
-<?php include_once "includes/header.php"; ?>
+<?php
+include_once "../src/Core/header.php";
+?>
 <div class="card shadow-lg">
     <div class="card-body">
         <form action="plato_save" method="post" autocomplete="off" enctype="multipart/form-data">
@@ -71,4 +73,4 @@
         </table>
     </div>
 </div>
-<?php include_once "includes/footer.php"; ?>
+<?php include_once "../src/Core/footer.php"; ?>

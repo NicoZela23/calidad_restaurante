@@ -16,7 +16,7 @@ include_once "../src/Core/header.php";
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="platos.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="index.php?controller=PlatoController&action=index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">
@@ -28,7 +28,7 @@ include_once "../src/Core/header.php";
                     <div class="icon">
                         <i class="ion ion-stats-bars"></i>
                     </div>
-                    <a href="salas.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="index.php?controller=SalaController&action=index" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <div class="col-lg-3 col-6">

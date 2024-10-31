@@ -13,8 +13,13 @@ class PlatoModel {
 
     public function getAllPlatos() {
         $query = mysqli_query($this->db, "SELECT * FROM platos WHERE estado = 1");
-        return mysqli_fetch_assoc($query);
+        $platos = [];
+        while ($row = mysqli_fetch_assoc($query)) {
+            $platos[] = $row;
+        }
+        return $platos;
     }
+    
 
     public function getPlatoByName($plato) {
         $query = mysqli_query($this->db, "SELECT * FROM platos WHERE nombre = '$plato' AND estado = 1");
