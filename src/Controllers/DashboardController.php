@@ -26,4 +26,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $analisisVentaController->index();
         exit();
     }
+
+    if ($controller === 'PlatoController' && $action === 'index') {
+        $platoController = new PlatoController();
+        $platoController->index();
+        exit();
+    }
+
+    if ($controller === 'SalaController' && $action === 'index') {
+        $salaController = new SalaController();
+        $salaController->index();
+        exit();
+    }
 }

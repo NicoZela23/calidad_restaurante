@@ -2,6 +2,10 @@
 
 Este proyecto sigue una serie de estándares y convenciones con el objetivo de garantizar la calidad, consistencia y mantenibilidad del código. Todos los desarrolladores que trabajen en este repositorio deberán seguir las pautas aquí descritas.
 
+## Convencion de nombres (variables y clases)
+
+## Convencion de tablas
+
 ## Indentación
 
 El código utiliza una indentación consistente de **4 espacios por nivel**. Esto es un estándar común en PHP y en muchos otros lenguajes de programación, y mejora la legibilidad del código al mantener una estructura clara y fácil de seguir.
