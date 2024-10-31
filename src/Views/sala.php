@@ -1,4 +1,4 @@
-<?php 
+<?php
 include_once "../src/Core/header.php";
 ?>
 
@@ -6,11 +6,12 @@ include_once "../src/Core/header.php";
     <div class="card-body">
         <?php if (isset($_SESSION['alert'])): ?>
             <div class="alert alert-info">
-                <?= $_SESSION['alert']; unset($_SESSION['alert']); ?>
+                <?= $_SESSION['alert'];
+                unset($_SESSION['alert']); ?>
             </div>
         <?php endif; ?>
 
-        <form action="" method="post" id="formulario">
+        <form action="index.php?controller=SalaController&action=saveSala" method="post" id="formulario">
             <input type="hidden" name="id" id="id">
             <div class="row">
                 <div class="col-md-5">
@@ -27,8 +28,8 @@ include_once "../src/Core/header.php";
                 </div>
                 <div class="col-md-5 text-center">
                     <label for="">Acciones</label> <br>
-                    <input type="submit" value="Registrar" class="btn btn-primary">
-                    <button type="button" onclick="limpiar()" class="btn btn-success">Nuevo</button>
+                    <input type="submit" value="Registrar" class="btn btn-primary" id="registerButton">
+                    <button type="button" onclick="limpiar()" class="btn btn-success">Limpiar</button>
                 </div>
             </div>
         </form>
@@ -50,8 +51,12 @@ include_once "../src/Core/header.php";
                             <td><?= $sala['nombre']; ?></td>
                             <td><?= $sala['mesas']; ?></td>
                             <td>
-                                <a href="#" onclick="editarSala(<?= $sala['id']; ?>)" class="btn btn-primary">Editar</a>
-                                <form action="/salas/delete/<?= $sala['id']; ?>" method="post" class="d-inline confirmar">
+                                <button type="button" class="btn btn-primary"
+                                    onclick="editarSala('<?= $sala['id']; ?>', '<?= $sala['nombre']; ?>', '<?= $sala['mesas']; ?>')">Editar</button>
+
+                                <form action="index.php?controller=SalaController&action=deleteSala" method="post"
+                                    class="d-inline confirmar">
+                                    <input type="hidden" name="id" value="<?= $sala['id']; ?>">
                                     <button type="submit" class="btn btn-danger">Eliminar</button>
                                 </form>
                             </td>

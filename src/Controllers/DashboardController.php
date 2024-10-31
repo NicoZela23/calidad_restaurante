@@ -45,3 +45,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         exit();
     }
 }
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $controller = $_GET['controller'] ?? '';
+    $action = $_GET['action'] ?? '';
+
+    if ($controller === 'SalaController' && $action === 'saveSala') {
+        $salaController = new SalaController();
+        $salaController->saveSala();
+        exit();
+    }
+    if($controller === 'SalaController' && $action === 'deleteSala') {
+        $salaController = new SalaController();
+        $salaController->deleteSala();
+        exit();
+    }
+}

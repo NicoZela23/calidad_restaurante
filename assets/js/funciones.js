@@ -168,6 +168,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+function editarSala(id, nombre, mesas) {
+  document.getElementById('id').value = id;
+  document.getElementById('nombre').value = nombre;
+  document.getElementById('mesas').value = mesas;
+  document.getElementById('registerButton').value = "Actualizar";
+
+  document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+}
 function listar() {
   let html = "";
   let detalle = "detalle";
