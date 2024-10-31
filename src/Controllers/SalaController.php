@@ -4,14 +4,17 @@ namespace Controllers;
 
 use Models\SalaModel;
 
-class SalaController {
+class SalaController
+{
     private $salaModel;
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->salaModel = new SalaModel();
     }
 
-    public function index() {
+    public function index()
+    {
         if ($_SESSION['rol'] != 1) {
             header('Location: permisos.php');
             exit;
@@ -20,7 +23,8 @@ class SalaController {
         include "../src/Views/sala.php";
     }
 
-    public function saveSala() {
+    public function saveSala()
+    {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $alert = '';
             $id = $_POST['id'];
@@ -44,8 +48,18 @@ class SalaController {
             }
 
             $_SESSION['alert'] = $alert;
-            header('Location: /salas');
+            header('Location: index.php?controller=SalaController&action=index');
             exit;
+        }
+    }
+    public function deleteSala()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id = $_POST['id'];
+            $this->salaModel->deleteSala($id);
+            $alert = 'Sala eliminada';
+            $_SESSION['alert'] = $alert;
+            header('Location: index.php?controller=SalaController&action=index');
         }
     }
 }

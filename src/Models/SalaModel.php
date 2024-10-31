@@ -34,4 +34,12 @@ class SalaModel {
         $query = mysqli_query($this->db, "UPDATE salas SET nombre = '$nombre', mesas = '$mesas' WHERE id = $id");
         return $query;
     }
+    public function deleteSala($id) {
+        $query = "
+            DELETE 
+            FROM salas 
+            WHERE id = $id
+        ";
+        return mysqli_query($this->db, $query);
+    }
 }
