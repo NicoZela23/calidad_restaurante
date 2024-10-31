@@ -38,4 +38,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $salaController->index();
         exit();
     }
+
+    if ($controller === 'UsuarioController' && $action === 'index') {
+        $usuarioController = new UsuarioController();
+        $usuarioController->index();
+        exit();
+    }
 }
