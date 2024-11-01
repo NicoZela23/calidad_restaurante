@@ -50,8 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $salaController->newVenta();
         exit();
     }
-
-    
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -82,6 +80,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($controller === 'SalaController'&& $action === 'showMesas') {
         $salaController = new SalaController();
         $salaController->showMesas();
+        exit();
+    }
+
+    if ($controller === 'PedidoController' && $action === 'index') {
+        $pedidoController = new PedidoController();
+        $pedidoController->index();
+        exit();
+    }
+
+    if ($controller === 'PedidoController' && $action === 'createPedido') {
+        $pedidoController = new PedidoController();
+        $pedidoController->createPedido();
         exit();
     }
 }

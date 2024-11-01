@@ -2,6 +2,12 @@
 include_once "../src/Core/header.php";
 ?>
 <div class="card">
+    <?php if (isset($_SESSION['alert'])): ?>
+        <div class="alert alert-info">
+            <?= $_SESSION['alert'];
+            unset($_SESSION['alert']); ?>
+        </div>
+    <?php endif; ?>
     <div class="card-header text-center">
         Salas
     </div>
@@ -20,7 +26,8 @@ include_once "../src/Core/header.php";
                     <div class="mt-4">
                         <form action="index.php?controller=SalaController&action=showMesas" method="POST">
                             <input type="hidden" name="id" value="<?= $sala['id']; ?>">
-                            <button type="submit" class="btn btn-primary btn-block btn-flat"> <i class="far fa-eye mr-2"></i>Mesas</button>
+                            <button type="submit" class="btn btn-primary btn-block btn-flat"> <i
+                                    class="far fa-eye mr-2"></i>Mesas</button>
                         </form>
                     </div>
                 </div>

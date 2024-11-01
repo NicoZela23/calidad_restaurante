@@ -202,7 +202,7 @@ function listar() {
                 <div class="card">
                     <div class="card-body">
                         <div class="col-12">
-                            <img src="${row.imagen}" class="product-image" alt="Product Image">
+                            <img src="http://localhost/calidad_restaurante/assets/img/default.png" class="product-image" alt="Product Image">
                         </div>
                         <p class="my-3">${row.nombre}</p>
                         <h2 class="mb-0">${row.precio}</h2>
