@@ -20,6 +20,21 @@ class SalaModel {
         return $salas;
     }
 
+    public function getAllSalas_Pedidos($id_sala) {
+        $query = "SELECT * FROM salas 
+        INNER JOIN pedidos ON salas.id = pedidos.id_sala 
+        WHERE pedidos.id_sala = $id_sala 
+        ORDER BY pedidos.id_sala";
+        $result = mysqli_query($this->db, $query);
+        $sala_pedidos = [];
+    
+        while ($data = mysqli_fetch_assoc($result)) {
+            $sala_pedidos[] = $data;
+        }
+    
+        return $sala_pedidos;
+    }
+    
     public function getSalaByName($nombre) {
         $query = mysqli_query($this->db, "SELECT * FROM salas WHERE nombre = '$nombre' AND estado = 1");
         return mysqli_fetch_assoc($query);

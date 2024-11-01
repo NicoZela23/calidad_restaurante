@@ -23,6 +23,23 @@ class SalaController
         include "../src/Views/sala.php";
     }
 
+    public function newVenta(){
+        if ($_SESSION['rol'] != 1) {
+            header('Location: permisos.php');
+            exit;
+        }
+        $salas = $this->salaModel->getAllSalas();
+        include "../src/Views/ventaSalas.php";
+    }
+
+    public function showMesas(){
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $id_sala = $_POST['id'];
+            $sala_pedidos = $this->salaModel->getAllSalas_Pedidos($id_sala);
+            include "../src/Views/ventaMesas.php";
+        }
+    }
+
     public function saveSala()
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {

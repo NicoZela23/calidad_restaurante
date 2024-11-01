@@ -55,7 +55,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
             <!-- Brand Logo -->
-            <a href="dashboard.php" class="brand-link">
+            <a href="index.php?controller=DashboardController&action=index" class="brand-link">
                 <img src="http://localhost/calidad_restaurante/assets/img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
                 <span class="brand-text font-weight-light">RestBAR</span>
             </a>
@@ -96,7 +96,7 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
                             <ul class="nav nav-treeview">
                                 <?php if ($_SESSION['rol'] == 1 || $_SESSION['rol'] == 3) {
                                     echo '<li class="nav-item">
-                                        <a href="index.php" class="nav-link">
+                                        <a href="index.php?controller=SalaController&action=nuevaVenta" class="nav-link">
                                             <i class="far fa-circle nav-icon"></i>
                                             <p>Nueva venta</p>
                                         </a>

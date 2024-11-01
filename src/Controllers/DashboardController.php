@@ -44,6 +44,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $usuarioController->index();
         exit();
     }
+
+    if ($controller === 'SalaController' && $action === 'nuevaVenta') {
+        $salaController = new SalaController();
+        $salaController->newVenta();
+        exit();
+    }
+
+    
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -69,6 +77,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($controller === 'PlatoController' && $action === 'deletePlato') {
         $salaController = new PlatoController();
         $salaController->deletePlato();
+        exit();
+    }
+    if ($controller === 'SalaController'&& $action === 'showMesas') {
+        $salaController = new SalaController();
+        $salaController->showMesas();
         exit();
     }
 }
