@@ -8,7 +8,6 @@ include_once "../src/Core/header.php";
     <div class="card-body">
         <div class="row">
             <?php
-            $i = 0;
             $lista_pendientes = [];
 
             foreach ($sala_pedidos as $sala_pedido):
@@ -19,9 +18,8 @@ include_once "../src/Core/header.php";
                     ];
                 }
             endforeach;
-
-            foreach ($sala_pedidos as $sala_pedido):
-                $i++;
+            $numMesas = $sala_pedidos[1]['mesas'];
+            for ($i = 1; $i <= $numMesas; $i++) {
 
                 $is_pending = false;
                 foreach ($lista_pendientes as $pedido) {
@@ -34,7 +32,7 @@ include_once "../src/Core/header.php";
                 ?>
                 <div class="col-md-3">
                     <div class="card card-widget widget-user">
-                        <div class="widget-user-header bg-<?php echo $is_pending ? 'success' : 'danger' ?>">
+                        <div class="widget-user-header bg-<?php echo $is_pending ? 'danger' : 'success' ?>">
                             <h3 class="widget-user-username">MESA</h3>
                             <h5 class="widget-user-desc"><?php echo $i; ?></h5>
                         </div>
@@ -45,10 +43,10 @@ include_once "../src/Core/header.php";
 
                         <div class="card-footer">
                             <div class="description-block">
-                                <?php if ($is_pending): ?>
+                                <?php if (!$is_pending): ?>
                                     <form action="index.php?controller=SalaController&action=showMesas" method="POST">
                                         <input type="hidden" name="id" value="<?= $pedido_id ?>">
-                                        <button type="submit" class="btn btn-outline-info">Editar Pedido</button>
+                                        <button type="submit" class="btn btn-outline-info">Hacer Pedido</button>
                                     </form>
                                 <?php else: ?>
                                     <form action="index.php?controller=SalaController&action=showMesas" method="POST">
@@ -65,7 +63,7 @@ include_once "../src/Core/header.php";
                     </div>
                 </div>
                 <?php
-            endforeach;
+            }
             ?>
         </div>
     </div>
