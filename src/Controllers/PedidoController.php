@@ -21,10 +21,10 @@ class PedidoController
 
     public function createPedido()
     {
-        if (!empty($_POST)) {
+        // if (!empty($_POST)) {
             $alert = "";
             $id_sala = $_POST['id_sala'];
-            $mesa = $_POST['mesa'];
+            $mesa = $_POST['num_mesa'];
             $observacion = ''; // Example value; update as needed
             $id_usuario = '1'; // Example value; update as needed
             $total = 0;
@@ -50,11 +50,13 @@ class PedidoController
                     }
                     $alert = 'Pedido registrado';
                 }
+                $_SESSION['alert'] = $alert;
+                header('Location: index.php?controller=SalaController&action=nuevaVenta');
+                exit;
             }
-        }
-        $_SESSION['alert'] = $alert;
-        header('Location: index.php?controller=SalaController&action=nuevaVenta');
-        exit;
+        // }
+        // header('Location: index.php?controller=AnalisisVentaController&action=index');
+        // exit;
     }
 
 }

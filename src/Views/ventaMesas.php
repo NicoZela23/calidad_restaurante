@@ -46,17 +46,19 @@ include_once "../src/Core/header.php";
                             <div class="description-block">
                                 <?php if (!$is_pending): ?>
                                     <form action="index.php?controller=PedidoController&action=index" method="POST">
-                                        <input type="hidden" name="id_sala" value="<?= $pedido_id ?>">
+                                        <input type="hidden" name="id_sala" value="<?= $id_sala ?>">
                                         <input type="hidden" name="num_mesa" value="<?= $i ?>">
                                         <button type="submit" class="btn btn-outline-info">Hacer Pedido</button>
                                     </form>
                                 <?php else: ?>
                                     <form action="index.php?controller=SalaController&action=showMesas" method="POST">
-                                        <input type="hidden" name="id" value="<?= $pedido_id ?>">
+                                        <input type="hidden" name="id_sala" value="<?= $id_sala ?>">
+                                        <input type="hidden" name="num_mesa" value="<?= $i ?>">
                                         <button type="submit" class="btn btn-outline-success">Editar Pedido</button>
                                     </form>
                                     <form action="index.php?controller=SalaController&action=showMesas" method="POST">
-                                        <input type="hidden" name="id" value="<?= $pedido_id ?>">
+                                        <input type="hidden" name="id_sala" value="<?= $id_sala ?>">
+                                        <input type="hidden" name="num_mesa" value="<?= $i ?>">
                                         <button type="submit" class="btn btn-outline-success">Finalizar</button>
                                     </form>
                                 <?php endif; ?>

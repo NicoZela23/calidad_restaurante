@@ -57,9 +57,9 @@ include_once "../src/Core/header.php";
                             <textarea id="observacion" class="form-control" rows="3"
                                 placeholder="Observaciones"></textarea>
                         </div>
-                        <form action="index.php?controller=PedidoController&action=createPedido" method="post" id="formulario">
-                            <input type="hidden" id="id_sala" value="<?php echo $_POST['id_sala'] ?>">
-                            <input type="hidden" id="mesa" value="<?php echo $_POST['num_mesa'] ?>">
+                        <form action="index.php?controller=PedidoController&action=createPedido" method="POST">
+                            <input type="hidden" name="id_sala" value="<?php echo $_POST['id_sala'] ?>">
+                            <input type="hidden" name="num_mesa" value="<?php echo $_POST['num_mesa'] ?>">
                             <button type="submit" class="btn btn-primary">Realizar Pedido</button>
                         </form>
                         <!-- <button class="btn btn-primary" type="button" id="realizar_pedido">Realizar pedido</button> -->
