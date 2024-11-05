@@ -44,6 +44,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $usuarioController->index();
         exit();
     }
+
+    if ($controller === 'SalaController' && $action === 'nuevaVenta') {
+        $salaController = new SalaController();
+        $salaController->newVenta();
+        exit();
+    }
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -69,6 +75,41 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if($controller === 'PlatoController' && $action === 'deletePlato') {
         $salaController = new PlatoController();
         $salaController->deletePlato();
+        exit();
+    }
+    if ($controller === 'SalaController'&& $action === 'showMesas') {
+        $salaController = new SalaController();
+        $salaController->showMesas();
+        exit();
+    }
+
+    if ($controller === 'PedidoController' && $action === 'index') {
+        $pedidoController = new PedidoController();
+        $pedidoController->index();
+        exit();
+    }
+
+    if ($controller === 'PedidoController' && $action === 'createPedido') {
+        $pedidoController = new PedidoController();
+        $pedidoController->createPedido();
+        exit();
+    }
+    
+    if ($controller === 'PedidoController' && $action === 'edit') {
+        $pedidoController = new PedidoController();
+        $pedidoController->edit();
+        exit();
+    }
+
+    if ($controller === 'PedidoController' && $action === 'editPedido') {
+        $pedidoController = new PedidoController();
+        $pedidoController->editPedido();
+        exit();
+    }
+    
+    if ($controller === 'PedidoController' && $action === 'finish') {
+        $pedidoController = new PedidoController();
+        $pedidoController->finishPedido();
         exit();
     }
 }
