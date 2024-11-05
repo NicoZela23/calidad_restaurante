@@ -51,12 +51,12 @@ include_once "../src/Core/header.php";
                                         <button type="submit" class="btn btn-outline-info">Hacer Pedido</button>
                                     </form>
                                 <?php else: ?>
-                                    <form action="index.php?controller=SalaController&action=showMesas" method="POST">
+                                    <form action="index.php?controller=PedidoController&action=edit" method="POST">
                                         <input type="hidden" name="id_sala" value="<?= $id_sala ?>">
                                         <input type="hidden" name="num_mesa" value="<?= $i ?>">
                                         <button type="submit" class="btn btn-outline-success">Editar Pedido</button>
                                     </form>
-                                    <form action="index.php?controller=SalaController&action=showMesas" method="POST">
+                                    <form action="index.php?controller=PedidoController&action=finish" method="POST">
                                         <input type="hidden" name="id_sala" value="<?= $id_sala ?>">
                                         <input type="hidden" name="num_mesa" value="<?= $i ?>">
                                         <button type="submit" class="btn btn-outline-success">Finalizar</button>

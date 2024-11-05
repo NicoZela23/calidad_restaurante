@@ -94,4 +94,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $pedidoController->createPedido();
         exit();
     }
+    
+    if ($controller === 'PedidoController' && $action === 'edit') {
+        $pedidoController = new PedidoController();
+        $pedidoController->edit();
+        exit();
+    }
+
+    if ($controller === 'PedidoController' && $action === 'editPedido') {
+        $pedidoController = new PedidoController();
+        $pedidoController->editPedido();
+        exit();
+    }
+    
+    if ($controller === 'PedidoController' && $action === 'finish') {
+        $pedidoController = new PedidoController();
+        $pedidoController->finishPedido();
+        exit();
+    }
 }
