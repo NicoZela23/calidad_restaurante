@@ -60,4 +60,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $salaController->deleteSala();
         exit();
     }
+
+    if($controller === 'PlatoController' && $action === 'savePlato') {
+        $platoController = new PlatoController();
+        $platoController->savePlato();
+        exit();
+    }
+    if($controller === 'PlatoController' && $action === 'deletePlato') {
+        $salaController = new PlatoController();
+        $salaController->deletePlato();
+        exit();
+    }
 }

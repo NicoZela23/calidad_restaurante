@@ -176,6 +176,17 @@ function editarSala(id, nombre, mesas) {
 
   document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
 }
+
+function editarPlato(id, nombre, precio, descripcion) {
+  document.getElementById('id').value = id;
+  document.getElementById('plato').value = nombre;
+  document.getElementById('precio').value = precio;
+  document.getElementById('descripcion').value = descripcion;
+  document.getElementById('btnAccion').value = "Actualizar";
+
+  document.getElementById('formulario').scrollIntoView({ behavior: 'smooth' });
+}
+
 function listar() {
   let html = "";
   let detalle = "detalle";
